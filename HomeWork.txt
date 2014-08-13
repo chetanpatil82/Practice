@@ -1,0 +1,139 @@
+   doing addition of all the inters numbers in array[]
+   addition of all the double number in double arrays
+   method overloading method with same name and different data types
+   
+   
+   
+   
+        // for (double i=0;i<array.length;i++)
+        // {
+        // result = result + array[((int) i)];
+        // break;
+		
+		1)I should able to pass any number of variables and can add elements
+		write a method 
+		
+		
+		2)Class calculate full pattern los decision when i pass on rate value and LRV for 7 days
+		  rate is for one day and LRV for 7 days and FPLOS for 1 day
+		  YNYNYNY
+		 
+
+
+		3)Baes on the use case we have to decide the scope		
+	Three sorting methods to calculate the string
+		
+		
+		int numbers[]={9,3,12,1,8};
+        int sortindescendingorder[]={12,9,8,3,1};
+		
+		instance variable
+
+		
+		
+		
+package training.ideas.java.Sorting;
+public class SortArray
+{
+    public static int[] sortAscending(int[] input)
+    {
+        for (int counter = 0; counter < input.length - 1;counter++)
+        {   if (input[counter] > input[counter + 1])
+            {
+                int temp = input[counter];
+                input[counter]=input[counter+1];
+                input[counter+1]=temp;
+            }
+        }
+        return input;
+    }
+}
+package Sorting;
+import org.junit.Assert;
+import org.junit.Test;
+import training.ideas.java.Sorting.SortArray;
+
+public class SortArrayTest
+{
+    @Test
+    public void given_numbers_sort_in_ascending_numbers() {
+        int input[] = {1, 5, 4, 2, 8};
+        int expected[] = {1, 4, 2, 5,8};
+     // int expected[] = {1, 2, 4, 5,8};
+        Assert.assertArrayEquals(expected, SortArray.sortAscending(input));
+    }
+
+}
+
+
+
+
+public class BubbleSort
+{
+    private enum SortOrder{ASC,DESC}
+    private boolean
+    private static int sort (final int [] inputNumbers,SortOrder sortOrder)
+    {
+
+    }
+
+    public static int[] bubbleSorting_asc(int [] inputNumbers) {
+
+        for (int elementCounter = 0; elementCounter < inputNumbers.length-1; elementCounter++) {
+            for (int swapCouter = 0; swapCouter < inputNumbers.length - 1 - elementCounter; swapCouter++) {
+                if (inputNumbers[swapCouter] > inputNumbers[swapCouter + 1]) {
+                    int temp = inputNumbers[swapCouter];
+                    inputNumbers[swapCouter ] = inputNumbers[swapCouter+1];
+                    inputNumbers[swapCouter+1] = temp;
+
+                }
+            }
+        }
+        return inputNumbers;
+    }
+    public static int[] bubbleSorting_desc(int[] inputnumbers) {
+        for (int elementcounter = 0; elementcounter < inputnumbers.length - 1; elementcounter++) {
+            for (int swapcouter = 0; swapcouter < inputnumbers.length - 1 - elementcounter; swapcouter++) {
+                if (inputnumbers[swapcouter] < inputnumbers[swapcouter + 1]) {
+                    int temp = inputnumbers[swapcouter];
+                    inputnumbers[swapcouter + 1] = temp;
+                    inputnumbers[swapcouter] = inputnumbers[swapcouter + 1];
+
+                }
+            }
+        }
+        return inputnumbers;
+    }
+}
+
+
+
+
+
+
+
+package training.ideas.java.Sorting;
+
+public class FibonacciSeries {
+
+    public static int[] fibonacciCalc(int number)
+    {
+        int arr[] =new int[number];
+        arr[0]=0;
+        arr[1]=1;
+        for(int counter=2; counter<number;counter++)
+        {
+            arr[counter]=arr[counter-1]+arr[counter-2];
+
+        }
+        return arr;
+    }
+    /*public static int fibonacciCalc(int number)
+    {
+        //int arr[] = new int[number];
+        if (number == 1)
+            return 1;
+        else return (number + fibonacciCalc(number - 1));
+    }*/
+}
+

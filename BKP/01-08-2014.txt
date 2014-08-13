@@ -1,0 +1,56 @@
+package Sorting;
+import org.junit.Assert;
+import org.junit.Test;
+import training.ideas.java.Sorting.SortArray;
+
+public class SortArrayTest
+{
+    @Test
+    public void given_numbers_sort_in_ascending_numbers()
+    {
+        int input[] = {1, 5, 4, 2, 8};
+        int expected[] = {1, 2, 4, 5,8};
+        Assert.assertArrayEquals(expected, SortArray.sortAscending(input));
+    }
+
+   /* @Test
+    public void given_numbers_sort_in_descending_numbers()
+    {
+        int input[] = {1, 5, 4, 2, 8};
+        int expected[] = {8, 5, 4, 2,1};
+        Assert.assertArrayEquals(expected,SortArray.sortDescending(input));
+
+    }*/
+
+}
+
+package training.ideas.java.Sorting;
+public class SortArray
+{
+    public static int[] sortAscending(int[] input)
+    {
+        for (int swapcounter)
+        for (int counter = 0; counter < input.length - 1;counter++)
+        {   if (input[counter] > input[counter + 1])
+            {
+                int temp = input[counter];
+                input[counter]=input[counter+1];
+                input[counter+1]=temp;
+            }
+        }
+        return input;
+    }
+   /* public static int[] sortDescending(int[] input)
+    {
+        for (int counter = 0; counter < input.length - 1;counter++)
+        {   if (input[counter] > input[counter + 1])
+        {
+            int temp = input[counter];
+            input[counter]=input[counter+1];
+            input[counter+1]=temp;
+        }
+        }
+        return input;
+    }*/
+}
+
