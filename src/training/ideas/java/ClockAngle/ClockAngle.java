@@ -5,14 +5,15 @@ package training.ideas.java.ClockAngle;
  */
 public class ClockAngle
 {
-    public static int ClockToAngle(int hourtime,int mintime)
+    public static double ClockToAngle(int hourtime,int mintime)
     {
-        int hourtime_in_mins = hourtime*60;
-        int totalhourtime=hourtime_in_mins+mintime;
-        int hourAngle = (int) (.5*(totalhourtime));
-        int minAngle = 6 * mintime;
-        int angle = Math.abs(hourAngle - minAngle);
+        double hourtime_in_mins = hourtime*60;
+        double totalhourtime=hourtime_in_mins+mintime;
+        double hourAngle = .5*(totalhourtime);
+        double minAngle = 6 * mintime;
+        double angle = Math.abs(hourAngle - minAngle);
         angle = 360 - angle;
         return angle;
+
     }
 }
